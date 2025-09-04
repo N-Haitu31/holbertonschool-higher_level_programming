@@ -2,8 +2,9 @@
 
 def print_last_digit(number):
 
-    last_digit = abs(number) % 10
+    abs = abs(number)
+    last_dig = abs % 10
 
-    print("{}".format(last_digit))
+    print("{}".format(last_dig), end="")
 
-    return last_digit
+    return last_dig
