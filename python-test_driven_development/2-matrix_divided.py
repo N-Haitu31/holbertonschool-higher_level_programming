@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-
 """
 That divides all elements
 """
 
 
 def matrix_divided(matrix, div):
-
     """
         Divide all element
     """
@@ -29,8 +27,7 @@ def matrix_divided(matrix, div):
         for element in row:
             if not isinstance(element, (int, float)):
                 raise TypeError(
-                    "matrix must be a matrix (list of lists) \
-                        of integers/floats")
+                    "matrix must be a matrix (list of lists) of integers/floats")
 
     new_matrix = []
     for row in matrix:
