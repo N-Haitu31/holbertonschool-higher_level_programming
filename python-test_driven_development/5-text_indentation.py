@@ -9,15 +9,12 @@ def text_indentation(text):
     """
     add 2 lines after . ? and : charaters
     """
-    if isinstance(text, str):
-        new_text = ""
-        for char in text:
-            char = char.strip()
-            if char in [".", "?", ":"]:
-                new_text += "{}{}".format(char, "\n\n")
-            else:
-                new_text += char
-
-        print(new_text)
-    else:
+    if not isinstance(text, str):
         raise TypeError("text must be a string")
+
+    for delimiter in ".?:":
+        text = text.replace(delimiter, f"{delimiter}\n\n")
+
+    lines = [line.strip() for line in text.split("\n\n")]
+
+    print("\n\n".join(lines), end="")
