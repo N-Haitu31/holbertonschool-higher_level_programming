@@ -36,7 +36,7 @@ if __name__ == "__main__":
         "ORDER BY id ASC"
     ).format(state_name)
 
-    # 5. Fetch and display results
+    # 5. Fetch, display and execute results
     cur.execute(query)
     rows = cur.fetchall()
     for row in rows:
