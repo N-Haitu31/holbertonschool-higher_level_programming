@@ -31,7 +31,7 @@ if __name__ == "__main__":
     # 4. Execute a SQL query:
     cur.execute(
         "SELECT * FROM states "
-        "WHERE name LIKE 'N%' "
+        "WHERE name LIKE BINARY 'N%' "
         "ORDER BY id ASC;"
     )
 
